@@ -1,0 +1,26 @@
+.loadingCircle{
+    aspect-ratio: 1 / 1;
+    background-image: url("../../assets/loading.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    animation: rotation 1s linear infinite;
+    z-index: 50;
+}
+
+.invisible{
+    display: none;
+}
+
+@keyframes rotation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }

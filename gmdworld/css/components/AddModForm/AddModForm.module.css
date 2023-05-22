@@ -1,0 +1,257 @@
+.form{
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formName{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.titleFrame{
+    height: 10%;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    color: rgba(255, 0, 0, 0.325);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid #FF4142;
+    font-size: 35px;
+}
+
+.areaFrame{
+    height: 30%;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    margin: 5px;
+    flex: 1 1 auto;
+    resize: none;
+    border-bottom: 3px solid #FF4142;
+}
+
+.files{
+    padding-top: 20px;
+    height: 20%;
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+
+.img{
+    margin: 5px;
+    height: 100%;
+    flex: 1 1 auto;
+    background-image: url("../../assets/img.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px dashed #FF4142;
+    background-color: rgba(255, 0, 0, 0.138);
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.download{
+    margin: 5px;
+    height: 100%;
+    flex: 1 1 auto;
+    background-image: url("../../assets/download.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px dashed #FF4142;
+    background-color: rgba(255, 0, 0, 0.138);
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.source{
+    margin: 5px;
+    height: 100%;
+    flex: 1 1 auto;
+    background-image: url("../../assets/source.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px dashed #FF4142;
+    background-color: rgba(255, 0, 0, 0.138);
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.file{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.isWindows{
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 auto;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 50px 0 0 50px;
+    border: 4px solid #FF4142;
+}
+.isWindows:checked{
+    transition: all 0.3s;
+}
+.isWindows::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/windows.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+    filter: hue-rotate(140deg) contrast(10);
+}
+.isWindows:checked::before {
+    filter: brightness(1000%);
+    transition: all 0.3s;
+}
+.isWindows::after{
+    content: '';
+    background-color: #FF4142;
+    position: absolute;
+    display: block;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: all 0.3s;
+}
+.isWindows:checked::after{
+    left: 0;
+    transition: all 0.3s;
+}
+
+.isAndroid{
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 auto;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border-radius: 0 50px 50px 0;
+    border: 4px solid #FF4142;
+}
+.isAndroid:checked{
+    transition: all 0.3s;
+}
+.isAndroid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/android.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+    filter: hue-rotate(214deg) saturate(3);
+}
+.isAndroid:checked::before {
+    filter: brightness(1000%);
+    transition: all 0.3s;
+}
+.isAndroid::after{
+    content: '';
+    background-color: #FF4142;
+    position: absolute;
+    display: block;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: all 0.3s;
+}
+.isAndroid:checked::after{
+    left: 0;
+    transition: all 0.3s;
+}
+
+
+
+.radios{
+    margin-top: 15px;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    max-width: 800px;
+}
+
+
+.send{
+    width: 30%;
+    min-width: 200px;
+    height: 10%;
+    margin-top: 2%;
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 4px solid rgb(0, 0, 0);
+    transition: all 0.3s;
+}
+.send::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+.send:hover{
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.send:hover::before{
+    left: 0;
+    transition: all 0.3s;
+}
