@@ -38,4 +38,13 @@ export default class Requests{
       });
         return response;
     }
+
+    static async register(username, password, token){
+      const response = await axios.post("http://176.57.220.181:4000/register",{
+        username: username,
+        password: password,
+        token: token,
+    });
+      return response;
+  }
 }
